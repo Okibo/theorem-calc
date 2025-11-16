@@ -1,0 +1,24 @@
+{
+  "navigation": {
+    "tools": "Herramientas",
+    "about": "Acerca de",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "language": "Idioma"
+  },
+  "common": {
+    "calculate": "Calcular",
+    "results": "Resultados",
+    "steps": "Solución Paso a Paso",
+    "copy": "Copiar al Portapapeles",
+    "share": "Compartir",
+    "print": "Imprimir",
+    "newCalculation": "Nueva Calculación",
+    "back": "Atrás"
+  },
+  "errors": {
+    "required": "Este campo es requerido",
+    "invalidNumber": "Por favor ingrese un número válido",
+    "invalidInput": "Entrada inválida"
+  }
+}

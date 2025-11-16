@@ -1,0 +1,24 @@
+{
+  "navigation": {
+    "tools": "Tools",
+    "about": "About",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "language": "Language"
+  },
+  "common": {
+    "calculate": "Calculate",
+    "results": "Results",
+    "steps": "Step-by-Step Solution",
+    "copy": "Copy to Clipboard",
+    "share": "Share",
+    "print": "Print",
+    "newCalculation": "New Calculation",
+    "back": "Back"
+  },
+  "errors": {
+    "required": "This field is required",
+    "invalidNumber": "Please enter a valid number",
+    "invalidInput": "Invalid input"
+  }
+}

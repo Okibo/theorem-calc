@@ -1,0 +1,24 @@
+{
+  "navigation": {
+    "tools": "Outils",
+    "about": "À propos",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions de Service",
+    "language": "Langue"
+  },
+  "common": {
+    "calculate": "Calculer",
+    "results": "Résultats",
+    "steps": "Solution Étape par Étape",
+    "copy": "Copier dans le Presse-papiers",
+    "share": "Partager",
+    "print": "Imprimer",
+    "newCalculation": "Nouveau Calcul",
+    "back": "Retour"
+  },
+  "errors": {
+    "required": "Ce champ est obligatoire",
+    "invalidNumber": "Veuillez entrer un nombre valide",
+    "invalidInput": "Entrée invalide"
+  }
+}
