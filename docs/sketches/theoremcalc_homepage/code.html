@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TheoremCalc - Fast, Accurate Scientific Calculators</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f8f9fa",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            @apply font-display;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H8v-2h3V7h2v4h3v2h-3v4h-2z"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold text-gray-900 dark:text-white">TheoremCalc</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Math</a>
+<a class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Physics</a>
+<a class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Chemistry</a>
+<a class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-wide">
+<span class="truncate">Language</span>
+<span class="material-symbols-outlined ml-2 !text-base">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col lg:flex-row gap-8">
+<div class="w-full lg:w-3/4 flex flex-col gap-8">
+<div class="flex items-center justify-center h-[90px] w-full bg-gray-200 dark:bg-gray-800 rounded-lg">
+<p class="text-gray-500 dark:text-gray-400">Leaderboard Ad (728x90)</p>
+</div>
+<div class="w-full">
+<div class="flex min-h-[480px] flex-col items-center justify-center gap-8 rounded-xl bg-cover bg-center bg-no-repeat p-4" data-alt="Abstract scientific grid pattern" style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAxYgaYcwvMtoRQThPNBUHYLaCG59XHunWq1OUlJmmN_Vu7MEd_lq29i49WII7M9V3HksoeyG66BajcZlNRFKYMGz1avX7DIkzRBRZA0cf3d2qy5AUxhXpVe2KJG8boMzqyW1BMpbzpMSEIHX3Dmvdtg8nPdhUoO8eNNSBpPma8r7BG0SdAmRgS3_Nj2jQqkfDSv9fsV_WFuWW3ZLnDjvEjfEe3mCAs1JgKzh8QLlgc7ny58U-9o0xL5ztP79rj6eorMlEU_4ZMMk");'>
+<div class="flex flex-col gap-2 text-center text-white">
+<h1 class="text-4xl font-black leading-tight tracking-tighter md:text-6xl">Fast, Accurate Scientific Calculators.</h1>
+<h2 class="text-base font-normal leading-normal md:text-lg">Your free resource for core Math, Physics, and Chemistry problems.</h2>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-12 py-10">
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Math Calculators</h2>
+<p class="text-gray-600 dark:text-gray-400">From algebra to statistics, solve complex equations with ease.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+<a class="flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-800 p-4 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">function</span>
+<span class="font-medium">Quadratic Solver</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-800 p-4 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">moving</span>
+<span class="font-medium">Standard Deviation</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-800 p-4 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">show_chart</span>
+<span class="font-medium">Slope</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-800 p-4 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">percent</span>
+<span class="font-medium">Percentage</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-800 p-4 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">pin</span>
+<span class="font-medium">Sig Fig Calculator</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Chemistry Calculators</h2>
+<p class="text-gray-600 dark:text-gray-400">Balance equations, calculate molar mass, and explore stoichiometry.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+<a class="flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-800 p-4 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">biotech</span>
+<span class="font-medium">Molar Mass</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-800 p-4 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">balance</span>
+<span class="font-medium">Equation Balancer</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-800 p-4 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">science</span>
+<span class="font-medium">Molarity</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-800 p-4 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">scale</span>
+<span class="font-medium">Stoichiometry</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-800 p-4 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">straighten</span>
+<span class="font-medium">Percent Error</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Physics Calculators</h2>
+<p class="text-gray-600 dark:text-gray-400">Kinematics, dynamics, and more at your fingertips.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+<a class="flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-800 p-4 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">rocket_launch</span>
+<span class="font-medium">Kinematics</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-800 p-4 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">electric_bolt</span>
+<span class="font-medium">Ohm's Law (V=IR)</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-800 p-4 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">compress</span>
+<span class="font-medium">Force (F=ma)</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-800 p-4 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">directions_run</span>
+<span class="font-medium">Kinetic Energy</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-800 p-4 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">car_crash</span>
+<span class="font-medium">Momentum</span>
+</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-10 px-4 py-10 @container">
+<div class="flex flex-col gap-4">
+<h1 class="text-gray-900 dark:text-white text-3xl font-bold leading-tight tracking-tight max-w-[720px]">Why Choose TheoremCalc?</h1>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal max-w-[720px]">We provide a suite of tools designed for speed, accuracy, and ease of use, supported in multiple languages.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="flex flex-1 gap-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-background-light dark:bg-gray-900 p-4 flex-col">
+<div class="text-primary"><span class="material-symbols-outlined">speed</span></div>
+<div class="flex flex-col gap-1">
+<h2 class="text-gray-900 dark:text-white text-base font-bold leading-tight">Blazing Fast</h2>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">Get your results instantly with our performance-optimized calculators.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-background-light dark:bg-gray-900 p-4 flex-col">
+<div class="text-primary"><span class="material-symbols-outlined">palette</span></div>
+<div class="flex flex-col gap-1">
+<h2 class="text-gray-900 dark:text-white text-base font-bold leading-tight">Clean &amp; Simple</h2>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">A clutter-free, intuitive interface lets you focus on the problem.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-background-light dark:bg-gray-900 p-4 flex-col">
+<div class="text-primary"><span class="material-symbols-outlined">translate</span></div>
+<div class="flex flex-col gap-1">
+<h2 class="text-gray-900 dark:text-white text-base font-bold leading-tight">Multi-Language Support</h2>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">Access our tools in your preferred language for a better experience.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="hidden lg:block w-1/4">
+<div class="sticky top-24">
+<div class="flex items-center justify-center h-[600px] w-full max-w-[160px] mx-auto bg-gray-200 dark:bg-gray-800 rounded-lg">
+<p class="text-gray-500 dark:text-gray-400">Skyscraper Ad (160x600)</p>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<footer class="bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm text-gray-600 dark:text-gray-400">© 2024 TheoremCalc. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="#">About</a>
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="#">Contact</a>
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quadratic Equation Solver - QuickCalc</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#135bec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden text-gray-900 dark:text-gray-100">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-800 px-4 sm:px-6 md:px-10 py-3">
+<div class="flex items-center gap-4 text-gray-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-[-0.015em]">QuickCalc</h2>
+</div>
+<nav class="hidden md:flex flex-1 justify-center gap-8">
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">Math</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">Physics</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">Chemistry</a>
+</nav>
+<button class="flex items-center justify-center rounded-lg h-10 bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 gap-2 text-sm font-bold min-w-10 px-2.5 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-xl">translate</span>
+</button>
+</header>
+<main class="flex-grow w-full mx-auto px-4 sm:px-6 lg:px-8">
+<div class="w-full flex justify-center py-4">
+<div class="w-full max-w-[728px] h-[90px] bg-gray-200 dark:bg-gray-800 flex items-center justify-center rounded-lg">
+<p class="text-gray-500 dark:text-gray-400 text-sm">Leaderboard Ad (728x90)</p>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-8 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<div class="flex min-w-72 flex-col gap-2">
+<h1 class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Quadratic Equation Solver</h1>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal">Solves equations of the form ax² + bx + c = 0 for the variable x.</p>
+</div>
+</div>
+<div class="border-y border-gray-200 dark:border-gray-800 my-8">
+<h2 class="text-gray-900 dark:text-white tracking-light text-[28px] font-bold leading-tight px-4 text-center py-6 bg-background-light dark:bg-background-dark">ax² + bx + c = 0</h2>
+</div>
+<p class="text-gray-900 dark:text-gray-200 text-base font-normal leading-normal pb-3 pt-1 px-4">Please enter the values for the coefficients a, b, and c below.</p>
+<div class="px-4 py-5">
+<form class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-gray-700 dark:text-gray-300" for="coeff-a">Coefficient a</label>
+<input class="w-full rounded-lg border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="coeff-a" name="coeff-a" placeholder="Enter value for a" type="number"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-gray-700 dark:text-gray-300" for="coeff-b">Coefficient b</label>
+<input class="w-full rounded-lg border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="coeff-b" name="coeff-b" placeholder="Enter value for b" type="number"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-gray-700 dark:text-gray-300" for="coeff-c">Coefficient c</label>
+<input class="w-full rounded-lg border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="coeff-c" name="coeff-c" placeholder="Enter value for c" type="number"/>
+</div>
+<div class="md:col-span-3 pt-4">
+<button class="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-xl text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed" type="submit">
+                                        Solve
+                                    </button>
+</div>
+</form>
+</div>
+</div>
+<aside class="w-full lg:w-[160px] flex-shrink-0 pt-4 lg:pt-14">
+<div class="w-full h-[600px] bg-gray-200 dark:bg-gray-800 flex items-center justify-center rounded-lg">
+<p class="text-gray-500 dark:text-gray-400 text-sm">Skyscraper Ad (160x600)</p>
+</div>
+</aside>
+</div>
+</main>
+<footer class="w-full border-t border-gray-200 dark:border-gray-800 bg-background-light dark:bg-background-dark mt-auto">
+<div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500 dark:text-gray-400 gap-4">
+<p>© 2024 QuickCalc. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<a class="hover:text-primary dark:hover:text-primary transition-colors" href="#">About</a>
+<a class="hover:text-primary dark:hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary dark:hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,222 @@
+Here's the updated optimized prompt with mobile-first design emphasis:
+
+Generate a comprehensive Product Requirements Document (PRD) for the following web application:
+Project Overview
+Product Name: TheoremCalc
+Product Type: Multi-language, ad-supported educational calculator web portal
+Target Audience: Students, educators, and professionals needing fast, reliable calculations for Math, Physics, and Chemistry
+Business Objectives
+
+Build a high-traffic utility site that monetizes through ad revenue (Google AdSense)
+Achieve competitive advantage through superior speed, simplicity, and UX
+Capture international markets through native multi-language support
+Generate repeat traffic by becoming users' bookmarked calculation resource
+
+Technical Requirements
+Technology Stack
+
+Frontend Framework: Next.js (latest stable version)
+Hosting Platform: Vercel
+Internationalization: Next.js built-in i18n module
+Languages: TypeScript for type safety
+CSS Strategy: Mobile-first responsive design approach
+
+Core Features (MVP - 15 Calculators)
+Mathematics (5 tools):
+
+Quadratic Equation Solver
+Standard Deviation Calculator
+Slope Calculator
+Percentage Calculator
+Significant Figures Calculator
+
+Chemistry (5 tools):
+
+Molar Mass Calculator
+Chemical Equation Balancer
+Molarity Calculator
+Stoichiometry Calculator
+Percent Error Calculator
+
+Physics (5 tools):
+
+Kinematics Calculator
+Ohm's Law Calculator (V=IR)
+Force Calculator (F=ma)
+Kinetic Energy Calculator
+Momentum Calculator
+
+Key Functional Requirements
+1. Calculator Result Display
+
+Show final calculated answer prominently
+Display complete step-by-step solution with formulas
+Include explanation of methodology
+Ensure all mathematical notation renders correctly
+
+2. Two-Page User Flow (Critical for Monetization)
+
+Page 1 (Input Page): Tool-specific form with input fields, ad placement #1
+Page 2 (Results Page): Dedicated results display with step-by-step solution, ad placement #2
+Each page load = separate ad impression opportunity
+
+3. Multi-Language Support
+
+Initial Languages: English, Spanish, French (expandable)
+URL Structure: /[locale]/[tool-slug] (e.g., /en/quadratic-solver, /es/calculadora-cuadratica)
+Localized Content: All UI text, labels, descriptions, metadata
+SEO Implementation:
+
+Proper hreflang tags in <head> for all language variants
+Translated URL slugs for each tool in each language
+Localized <title> and <meta description> tags
+Prevent duplicate content penalties
+
+
+
+Performance Requirements
+
+Page Load Time: < 2 seconds (desktop), < 3 seconds (mobile)
+Lighthouse Score Targets: Performance 90+, SEO 100, Accessibility 90+
+Rendering Strategy:
+
+Static Generation (SSG) for tool landing pages
+Server-Side Rendering (SSR) where dynamic content needed
+
+
+
+Mobile-First Design Requirements
+Design Philosophy:
+
+Design for mobile viewport FIRST (320px+), then progressively enhance for tablets and desktops
+Touch-friendly interfaces with adequate touch target sizes (minimum 44x44px)
+Thumb-zone optimization for primary actions
+
+Mobile-Specific UI Requirements:
+
+Input Forms:
+
+Large, easy-to-tap input fields (minimum 48px height)
+Appropriate mobile keyboard types (numeric, decimal, etc.)
+Clear, visible labels above inputs
+Minimal scrolling required on mobile screens
+Single-column layouts for form fields
+
+
+Buttons & CTAs:
+
+Prominent, full-width or near-full-width CTAs on mobile
+Clear visual feedback on tap/click
+Adequate spacing between interactive elements (minimum 8px)
+
+
+Typography:
+
+Base font size: 16px minimum (prevents iOS zoom on input focus)
+High contrast ratios for readability (WCAG AA minimum)
+Responsive type scale using relative units (rem/em)
+
+
+Navigation:
+
+Hamburger or bottom navigation for mobile
+Sticky/fixed navigation for easy tool switching
+Breadcrumbs for orientation (collapsible on mobile)
+
+
+Results Display:
+
+Vertically stacked solution steps on mobile
+Collapsible sections for lengthy explanations
+Easy-to-read mathematical notation on small screens
+Share/copy buttons optimized for touch
+
+
+
+Responsive Breakpoints:
+
+Mobile: 320px - 767px (priority design target)
+Tablet: 768px - 1023px
+Desktop: 1024px+
+
+Mobile Performance Optimizations:
+
+Lazy loading for images and non-critical content
+Optimized image formats (WebP with fallbacks)
+Minimal JavaScript bundle sizes
+Critical CSS inlined for above-the-fold content
+Preload key resources
+
+Mobile Ad Placement Strategy:
+
+Non-intrusive ad formats (avoid interstitials that harm mobile UX)
+Anchor ads or in-content ads that don't disrupt flow
+Ensure ads don't cause layout shifts (CLS optimization)
+Responsive ad units that adapt to viewport
+
+SEO Requirements
+
+Each calculator on dedicated URL path
+Target high-volume evergreen keywords
+Rich structured data (Schema.org) for calculator tools
+Mobile-first indexing optimization (Google's priority)
+Clean, semantic HTML structure
+Optimized meta tags per language/tool combination
+
+Monetization Requirements
+
+Google AdSense integration
+Strategic ad placement on both input and results pages
+Non-intrusive ad positioning that maintains UX quality (especially mobile)
+Ad performance tracking and analytics
+Mobile-optimized ad formats
+
+User Experience Requirements
+
+Extremely simple, intuitive interfaces
+Clear input validation and error messaging
+Mobile-responsive design with mobile-first approach
+Fast, no-friction interaction
+Printable results pages (desktop)
+Share functionality (mobile-optimized)
+
+Success Metrics
+
+Monthly Active Users (MAU) - segmented by device type
+Pages per session (target: 2+ due to two-page flow)
+Mobile vs Desktop traffic ratio
+Mobile conversion rate (input page → results page)
+Ad impression volume and RPM (by device)
+Bounce rate (target: < 50%)
+Return visitor rate
+Average session duration
+Organic search traffic percentage
+Core Web Vitals scores (LCP, FID, CLS) - prioritize mobile
+
+Future Expansion Considerations
+
+Additional calculator tools based on search volume data
+More language versions based on traffic analysis
+Progressive Web App (PWA) capabilities for mobile
+Offline functionality for key calculators
+User accounts for saving calculation history
+API access for developers
+Native mobile app versions
+
+
+Please generate a detailed PRD including:
+
+User stories and use cases (with mobile scenarios prioritized)
+Detailed technical architecture
+Mobile-first UI component specifications
+Responsive design system and component library requirements
+Touch interaction patterns and gesture support
+Database schema (if needed for features like calculation history)
+API specifications (internal calculation engines)
+Mobile-first UI/UX wireframes descriptions for all breakpoints
+Accessibility requirements (WCAG 2.1 AA compliance, mobile focus)
+Testing strategy (including mobile device testing matrix)
+Deployment and CI/CD pipeline
+Analytics and monitoring requirements (mobile-specific metrics)
+Performance budgets (especially for mobile)
+Phase-based implementation roadmap with mobile-first milestone priorities
